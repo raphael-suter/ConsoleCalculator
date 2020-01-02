@@ -17,4 +17,9 @@ public class CalculatorTest {
 	public void summeZweiPositiveWerte_OK() {
 		assertEquals(testee.summe(23, 2), 25);
 	}
+
+	@Test
+	public void differenzZweiPositiveWerte_OK() {
+		assertEquals(testee.differenz(23, 2), 21);
+	}
 }
