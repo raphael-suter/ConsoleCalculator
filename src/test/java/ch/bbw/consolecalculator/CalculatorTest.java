@@ -32,4 +32,14 @@ public class CalculatorTest {
 	public void differenzPositivNegativ_OK() {
 		assertEquals(testee.differenz(23, -2), 25);
 	}
+
+	@Test(expected = ArithmeticException.class)
+	public void divisionDurch0_Exception() {
+		testee.division(22, 0);
+	}
+
+	@Test
+	public void division_NoException() {
+		testee.division(0, 22);
+	}
 }
