@@ -17,9 +17,9 @@ public class Calculator {
 		return !value;
 	}
 
-	private boolean privateBoolean(boolean value) {
-		return !value;
-	}
+	/*
+	 * private boolean privateBoolean(boolean value) { return !value; }
+	 */
 
 	boolean packageBoolean(boolean value) {
 		return !value;
