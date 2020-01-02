@@ -19,7 +19,17 @@ public class CalculatorTest {
 	}
 
 	@Test
+	public void summePositivNegativ_OK() {
+		assertEquals(testee.summe(23, -2), 21);
+	}
+
+	@Test
 	public void differenzZweiPositiveWerte_OK() {
 		assertEquals(testee.differenz(23, 2), 21);
+	}
+
+	@Test
+	public void differenzPositivNegativ_OK() {
+		assertEquals(testee.differenz(23, -2), 25);
 	}
 }
