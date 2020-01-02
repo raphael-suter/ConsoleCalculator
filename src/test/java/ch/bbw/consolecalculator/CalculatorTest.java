@@ -42,4 +42,24 @@ public class CalculatorTest {
 	public void division_NoException() {
 		testee.division(0, 22);
 	}
+
+	@Test
+	public void protectedBooleanTrue_OK() {
+		assertEquals(testee.protectedBoolean(true), false);
+	}
+
+	@Test
+	public void privateBooleanTrue_OK() {
+		/*
+		 * Private Methoden werden normalerweise nicht direkt getestet, sondern über die
+		 * Mehtoden, von denen sie aufgerufen werden. Falls es trotzdem mal nötig sein
+		 * sollte, gibt es APIs, welche das ermöglichen, indem sie private Methoden
+		 * durch zugreifbare Kopien ersetzen.
+		 */
+	}
+
+	@Test
+	public void packageBooleanTrue_OK() {
+		assertEquals(testee.packageBoolean(true), false);
+	}
 }
