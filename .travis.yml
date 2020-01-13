@@ -1,3 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: g07ygszweVCSO+qxMhofOSrqxaBWi8xl/w9TMe6RCTKfqKTVbt2tw2gfB8JfWqUiDVIjjjaLLF5KR+KcxC0GbMpXSwXwuC1KGQTCqR2kvMxOY8rt2gHtrMqcS7uAQOSc9nOgbSC9f81/+mrCpg40kK2UidLE/6kaZSUmC/oTiv9d72SRuTct+zgIGpjJ/Wv4+B09UkFI0kCeMgiQHiuWDf1NPyC502ESNdxbzeRhp6jvSeJc0rAIzw5dE1uDfafb8K9V26I58BPEq7Dz/ce6wd4KtlbTSnX/H2jcp4EN7Wi+NpTEx3jF1YotRuox2GVUI88aDaf2uZ0BVHmolgdq1EFkcvRaRgWQdINjV9mcCWcl2ppuGerXSvPhgOljVJDUdv3JtVyJKsvUYTFWEGhFaaAa8QPGHyYMSTnCWtKeMWGuZ5+RoHRPw+RC9bSE5gkfRb+mDFGvZfLJmjHAkx+n9dCQqIJtAzFwL6rddEpEqqkiN3b3eLiycToa21Zcz+fe+0lhp8CB/Zr/+y6i0l5EYfj2ZxobaM+NBmtDZtKs3LPRgKikk3Ud+ve62KwA9Goydun11E+izib6m7aLENf9U+at6HBJK+ICM98sUSoRa951stangYBMWQ9V04M9E88jUXkbXYc057pyDXdg4aEyGM9QY8InoyokAg9NDX3Ch2c=
+  file: "/home/travis/build/raphael-suter/ConsoleCalculator/target/ConsoleCalculator-0.0.1-SNAPSHOT.jar/home/travis/build/raphael-suter/ConsoleCalculator/target/ConsoleCalculator-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: raphael-suter/ConsoleCalculator
