@@ -7,6 +7,7 @@ before_deploy:
       - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
       - git tag $TRAVIS_TAG
 deploy:
+  skip_cleanup: true
   provider: releases
   api_key:
     secure: VRIqUzDaKEdAGofsiWKzenhMy5VLiMfkFralSPcKSQRdJAqhvBGtbHzozFSyTq2Mc28jqMKgEyERmYwh/ivOisQf6pWS7yCl4AIB246mRqSADucx9bAmkQ9EHV8L/DJw0N0macdco0iTCg2B8CYrP06YyjmWiSItsjrUC9SfYldPDzDwKVU5okvB2BKCU3L5JZCblQG0eBvPUKozihj8L6Gn2SMAdU2zctV+kbOJnBxZJW3XIp0osuxcogNoiFBYRSd4iCggo+PW9SQGnKiSZvmhkOP0EDVCQaEUndZmDS8CcKTg+qaQFGg/vUTshtxy+8Jlpd5x5dqZiKrRCrvU1FRB0jCGQ9IeD3Hnb+45U8llcsjzE6/Y6CVKHzbXuE534H30wjBTBTm+img0qY6p0rPonBHGaFl1Oc2tPTRsCdvmTDOQXNm8y/uWG+POOD8kZHJhKKdr8r4cWTIoJl5ehMBSPOQkpAddXWcmhn1j1yGSWHU6lLFFb/xI9GfFAggbvSeEq3rqogab2CfNOzsMJXqAObexOcXkdAkXcGRQLGbgfwPBIyUxJMcwPrWicrjG7Zc19qbmVcgI227wTU+jYv8fkkqSpzf8uzwdYOWtXbu2aV2M6UeYDioJmWwhQn7cjIGE9tQyqzX8/+nPUTWNdjai1xyVJh9zLxQ0TOgbg5w=
